@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script src="./js/script.js"></script>
+    <script src="https://kit.fontawesome.com/e6033f9057.js" crossorigin="anonymous"></script>
+
+    <title>Password Generate</title>
+
+    
+
+</head>
+<body>
+    <div class="container">
+        <div class="central_class">
+            <div class="password_generate">
+                <h1>Password Generator</h1>
+                <div class="password_generate_field">
+                    <input type="text" id="password" readonly>
+                    <span class="icon" id="copy" onclick="copyToClipboard()"><i class="fa-solid fa-clipboard" id="clipboard"></i></span>
+                </div>
+                <p id="result">
+                    Click Generate to generate your password
+                </p>
+            </div>
+            <div class="inputs_aditionals">
+                <div class="input_group">
+                    <label for="length" class="password_label">Password length</label>
+                    <input type="number" id="length" min="10" max="20" value="10">
+                </div>
+                <div class="input_group">
+                    <label for="uppercase">Include Uppercase</label>
+                    <input type="checkbox" id="uppercase">
+                </div>
+                <div class="input_group">
+                    <label for="lowercase">Include Lowercase</label>
+                    <input type="checkbox" id="lowercase">
+                </div>
+                <div class="input_group">
+                    <label for="numbers">Include Numbers</label>
+                    <input type="checkbox" id="numbers">
+                </div>
+                <div class="input_group">
+                    <label for="symbols">Include Symbols</label>
+                    <input type="checkbox" id="symbols">
+                </div>
+            </div>
+            
+            <button class="generate" id="generate">Generate</button>
+        </div>
+    </div>
+    <div id="notification" class="notification">Password copied to clipboard</div>
+    <div id="badpassword" class="false">Please generate a password</div>
+
+</body>
+</html>
